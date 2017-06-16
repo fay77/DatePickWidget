@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eeeeee">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dip"
+            android:text="选择送货日期"
+            android:textColor="#333333"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/tomorrow_btn"
+            android:layout_toRightOf="@id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:text="明天"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:background="#5177ee"
+            android:layout_marginLeft="22dp"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tx_finish"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:background="@drawable/time_pick_confirm"
+            android:text="@string/timepicker_finish"
+            android:textColor="#ffffff"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="40dp"
+        android:background="#ffffff"
+        android:paddingRight="40dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip">
+
+            <FrameLayout
+                android:layout_width="110dip"
+                android:layout_height="wrap_content">
+
+                <com.example.liangmutian.mypicker.LoopView
+                    android:id="@+id/loop_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="40dp"
+                    android:text="@string/timepicker_year"
+                    android:textColor="#0971ce" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.example.liangmutian.mypicker.LoopView
+                    android:id="@+id/loop_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="35dp"
+                    android:text="@string/timepicker_month"
+                    android:textColor="#0971ce" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="110dip"
+                android:layout_height="wrap_content">
+
+                <com.example.liangmutian.mypicker.LoopView
+                    android:id="@+id/loop_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/timepicker_day"
+                    android:textColor="#0971ce" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E2E2E2" />
+
+</LinearLayout>
