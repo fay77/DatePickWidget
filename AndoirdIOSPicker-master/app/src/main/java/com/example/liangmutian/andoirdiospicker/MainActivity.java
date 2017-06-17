@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Dialog dateDialog, timeDialog, chooseDialog;
     private TextView mTextView;
-    private List<String> list = new ArrayList<>();
+    private List<String> list = new  ArrayList<>();
 
 
     @Override
